@@ -41,33 +41,24 @@ class Garage {
   }
 }
 
-// Exemple d'utilisation :
-
-// Création de voitures
 const voiture1 = new Voiture("Toyota", "Corolla", 2020, "Bleu");
 const voiture2 = new Voiture("Honda", "Civic", 2022, "Rouge");
 const voiture3 = new Voiture("Renault", "Clio", 2019, "Blanc");
 
-// Création d'un garage
 const garage = new Garage();
 
-// Ajout des voitures au garage
 garage.ajouterVoiture(voiture1);
 garage.ajouterVoiture(voiture2);
 garage.ajouterVoiture(voiture3);
 
-// Afficher les détails de toutes les voitures dans le garage
 garage.voitures.forEach((voiture) => voiture.afficherDetails());
 
-// Afficher les voitures de l'année 2022
 console.log("Voitures de l'année 2022:");
 garage.afficherVoituresParAnnee(2022);
 
-// Afficher les voitures de la marque "Toyota"
 console.log("Voitures de la marque Toyota:");
 garage.afficherVoituresParMarque("Toyota");
 
-// Afficher les voitures dont la marque contient 3 lettres données par l'utilisateur
 const lettresUtilisateur = "Hon"; // Exemple avec "Hon" comme entrée utilisateur
 console.log(`Voitures dont la marque contient "${lettresUtilisateur}":`);
 garage.afficherVoituresParMarqueTroisLettres(lettresUtilisateur);
